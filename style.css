@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+    background-image: url('Vellichor.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #E8D8C3;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup {
+    animation: fadeInUp 0.4s ease;
+}
+
+.navbar {
+    background-color: #2C1B11;
+    color: #E8D8C3;
+    padding: 10px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.bookContainer {
+    padding: 15px;
+    width: 25%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bookContainer h2 {
+    color: #E8D8C3;
+}
+
+.bookContainer button {
+    background-color: #E8D8C3;
+    color: black;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+.bookContainer button:hover {
+    cursor: pointer;
+}
+
+.addButton {
+    background-color: #E8D8C3;
+    color: #2C1B11;
+    border-radius: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 40px;
+    border: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.addButton:hover {
+    cursor: pointer;
+}
+
+.overlay {
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.popup {
+    background-color: #E8D8C3;
+    width: 30%;
+    padding: 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 2;
+    display: none;
+}
+
+.popup input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+}
+
+.popup textarea {
+    background: transparent;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+.popup h2 {
+    color: #2C1B11;
+}
+
+.popup input::placeholder {
+    color: #2C1B11;
+}
+
+.popup textarea::placeholder {
+    color: #2C1B11;
+}
+
+.popup button {
+    background-color: #2C1B11;
+    color: #E8D8C3;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    margin-top: 10px;
+}
+
+.popup button:hover {
+    cursor: pointer;
+}
+
+.popup input:focus {
+    outline: none;
+}
+
+.popup textarea:focus {
+    outline: none;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+    .popup {
+        width: 90%;
+        left: 5%;
+        padding: 20px;
+    }
+
+    .bookContainer {
+        width: 90%;
+        margin: 15px auto;
+        display: block;
+    }
+
+    .addButton {
+        padding: 15px 20px;
+        font-size: 30px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .popup {
+        width: 60%;
+        left: 20%;
+        padding: 30px;
+    }
+
+    .bookContainer {
+        width: 45%;
+        margin: 20px;
+    }
+}
+
+
+

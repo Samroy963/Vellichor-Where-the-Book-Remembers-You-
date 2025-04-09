@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vellichor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="Vellichor.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1> Vellichor </h1>
+    </div>
+
+    <div class="container">
+        <div class="bookContainer">
+            <h2>Rich Dad Poor Dad</h2>
+            <h5>Robert</h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro itaque architecto temporibus et magnam
+                amet autem quae voluptate hic id. Nulla nemo explicabo ad, itaque est eos voluptatum nisi ab alias nihil
+                vel odit aliquid saepe repellendus vitae animi minus reprehenderit? Iusto repellat mollitia aspernatur
+                sequi ullam reprehenderit natus nostrum?</p>
+            <button onclick="deleteBook(event)">Delete</button>
+        </div>
+        
+    </div>
+
+    <div class="overlay"></div>
+    <div class="popup">
+        <h2>Add Book</h2>
+        <form>
+            <input type="text" placeholder="Book Title" id="bookTitle" autocomplete="off" required>
+            <input type="text" placeholder="Book Author" id="bookAuthor" autocomplete="off" required>
+            <textarea placeholder="Short Description" id="bookDesc" autocomplete="off" required></textarea>
+            <button id="addBook">ADD</button>
+            <button id="cancelPopup">CANCEL</button>
+        </form>
+    </div>
+
+    <button id="addButton" class="addButton">+</button>
+</body>
+<script src="script.js"></script>
+
+</html>
